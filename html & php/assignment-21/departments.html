@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departments</title>
+    <style>
+        .container {
+        display: flex;
+        justify-content: space-between;
+        }
+
+        .dropbtn {
+          background-color: #3498DB;
+          color: white;
+          padding: 16px;
+          font-size: 16px;
+          border: none;
+          cursor: pointer;
+        }
+        
+        .dropbtn:hover, .dropbtn:focus {
+          background-color: #00ff00;
+        }
+        
+        .dropdown {
+          position: relative;
+          display: inline-block;
+          margin: 50px;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f1f1f1;
+          min-width: 160px;
+          overflow: auto;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+        
+        .dropdown a:hover {
+            background-color: #ddd;
+        }
+        
+        .show {
+            display: block;
+        }  
+
+        .blink {
+          animation: blinker 1s linear infinite;
+          color: red;
+          font-family: sans-serif;
+          font-size: 30px;
+        }
+        @keyframes blinker {
+              50% {
+              opacity: 0;
+          }
+        }
+        h1{
+          padding-left: 500px;
+          padding-right: 500px;
+          padding-bottom: 50px;
+        }
+        move{
+        position: relative;
+        animation: mymove 10s infinite;
+        }
+
+        @keyframes mymove {
+        from {left: 0px;}
+        to {left: 1500px;}
+        }      
+    </style>
+</head>
+
+<body>
+  <center><p class="blink"><b><u>Kolkata College</u></b></p></center><br>
+  <marquee direction="right" behavior="alternate"> <h3>A college, affiliated under Calcutta University</h3></marquee>
+  <marquee><p>Join Here to get a BRIGHT FUTURE</p></marquee>
+  
+        
+    <div class="container">
+        <div class="dropdown">
+          <button onclick="myFunction1()" class="dropbtn">B.A</button>
+          <div id="myDropdown1" class="dropdown-content">
+            <a href="#">Bengali</a>
+            <a href="#">English</a>
+            <a href="#">History</a>
+            <a href="#">Geography</a>
+            <a href="#">English</a>
+            <a href="#">Political Science</a>
+            <a href="#">Philosophy</a>            
+            <a href="#">Psycology</a>
+            <a href="#">Journalism</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+            <button onclick="myFunction2()" class="dropbtn">B.Sc</button>
+            <div id="myDropdown2" class="dropdown-content">
+              <a href="#">Mathematics</a>
+              <a href="#">Computer Science</a>
+              <a href="#">Physics</a>
+              <a href="#">Chemistry</a>
+              <a href="#">Statistics</a>
+              <a href="#">Economics</a>
+              <a href="#">Biology</a>
+              <a href="#">Zoology</a>
+              <a href="#">Geology</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <button onclick="myFunction3()" class="dropbtn">B.Com</button>
+            <div id="myDropdown3" class="dropdown-content">
+              <a href="#">Accountancy</a>
+              <a href="#">Management</a>
+              <a href="#">Law</a>
+              <a href="#">Cost Accounting</a>
+              <a href="#">Marketing</a>
+              <a href="#">Finance</a>
+              <a href="#">Human Resource</a>
+            </div>
+          </div>
+          </div>
+        
+        <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction1() {
+          document.getElementById("myDropdown1").classList.toggle("show");
+        }
+
+        function myFunction2() {
+          document.getElementById("myDropdown2").classList.toggle("show");
+        }
+
+        function myFunction3() {
+          document.getElementById("myDropdown3").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        </script>
+
+</head>
+<body>
+    
+</body>
+</html>
